@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>Bussoo</title>
+
+  <!-- Porlet CSS -->
+  <link href="css/components.min.css" rel="stylesheet">
+  <link href="css/plugins.min.css" rel="stylesheet">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="js/morris-chart/morris.css">
+
+  <!--common-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+         <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="view/linestatus.html"><i class="fa fa-road"></i> <span>线路状态</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-eraser"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="view/station.html"> 站点管理</a></li>
+                        <li><a href="view/line.html"> 线路管理</a></li>
+                        <li><a href="view/addline-1.html"> 新增线路</a></li>
+                        <li><a href="view/updateline-1.html"> 线路优化</a></li>
+                        <li><a href="view/riderate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-truck"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="view/businfo.html"> 车辆信息</a></li>
+                        <li><a href="view/oil_view.html"> 燃油记录</a></li>
+                        <li><a href="view/accident_view.html"> 事故记录</a></li>
+                        <li><a href="view/fault_view.html"> 故障记录</a></li>
+                        <li><a href="view/repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="view/employee.html"><i class="fa fa-users"></i> <span>员工信息管理</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-user-md"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="view/driver.html"> 司机信息管理</a></li>
+                        <li><a href="view/dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-user"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="view/administrators.html"> 管理员管理</a></li>
+                        <li><a href="view/power.html"> 角色管理</a></li>
+                    </ul>
+                </li>     
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="搜索" />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">你有4封邮件 </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">郭伟宇 <span class="badge badge-success">new</span></span>
+                                          <span class="msg">司机发来的故障信息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">黄振</span>
+                                          <span class="msg">司机发来的维修消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">陈孝则</span>
+                                          <span class="msg">司机发来的事故消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">李霖</span>
+                                          <span class="msg">司机发来的故障消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name"> 韩雪乘客的投诉消息 </span>
+                                        <em class="small">34 分钟前</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">王仁鑫乘客的投诉消息  </span>
+                                        <em class="small">1 小时前</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                首页
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li class="active"> 我的首页</li>
+            </ul>
+            <div class="state-info">
+                <div class="panel">
+                    <div class="panel-body extra-pad">
+                        <div class="col-sm-6 col-xs-6">
+                            <div class="v-title">已乘车员工数</div>
+                            <div class="v-value">1990</div>
+                            
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                            <div class="v-title">未乘车员工数</div>
+                            <div class="v-value">310</div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-6 section-panel">
+                    <!--statistics start-->
+                    <div class="row state-overview">
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="panel purple">
+                                <div class="symbol">
+                                    <img src="images/员工.png" alt="">
+                                </div>
+                                <div class="state-value">
+                                    <div class="value"><span id="num-1">0</span></div>
+                                    <div class="title">员工数</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="panel red">
+                                <div class="symbol">
+                                    <img src="images/司机.png" alt="">
+                                </div>
+                                <div class="state-value">
+                                    <div class="value"><span id="num-2">0</span></div>
+                                    <div class="title">司机数</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row state-overview">
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="panel blue">
+                                <div class="symbol">
+                                    <img src="images/线路.png" alt="">
+                                </div>
+                                <div class="state-value">
+                                    <div class="value"><span id="num-3">0</span></div>
+                                    <div class="title">线路总数</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="panel green">
+                                <div class="symbol">
+                                    <img src="images/车辆.png" alt="">
+                                </div>
+                                <div class="state-value">
+                                    <div class="value"><span id="num-4">0</span></div>
+                                    <div class="title">车辆数</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--statistics end-->
+                </div>
+                <div class="col-md-6 state-overview section-panel">
+                    <!--more statistics box start-->
+                    <div class="panel deep-purple-box">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
+                                    <div id="graph-donut2" class="revenue-graph"></div>
+
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <ul class="bar-legend">
+                                        <li><span class="blue"></span> 2号线乘坐率</li>
+                                        <li><span class="green"></span> 1号线乘坐率</li>
+                                        <li><span class="purple"></span> 3号线乘坐率</li>
+                                        <li><span class="red"></span> 4号线乘坐率</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--more statistics box end-->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <header class="panel-heading">
+                            总体乘坐率一览
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="col-md-6">
+                                <div id="main-chart1" style="height:400px"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="main-chart2" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row revenue-states">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h4 style="color:#7b7b7b">线路乘坐率</h4>
+
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select name="" id="" class="form-control">
+                                        <option value="-1" disabled>请选择时间范围</option>
+                                        <option value="1">最近一周</option>
+                                        <option value="2">最近一月</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="clearfix">
+                                    <!--     <div id="main-chart-legend" class="pull-right">
+                                        </div> -->
+                                    </div>
+
+                                    <div id="main-chart4" style="height:350px">
+                                        
+                                    </div>
+                                    <ul class="revenue-short-info">
+                                        <li>
+                                            <h1 class="red">30%</h1>
+                                            <p>2号线</p>
+                                        </li>
+                                        <li>
+                                            <h1 class="purple">27%</h1>
+                                            <p>1号线</p>
+                                        </li>
+                                        <li>
+                                            <h1 class="green">24%</h1>
+                                            <p>3号线</p>
+                                        </li>
+                                        <li>
+                                            <h1 class="blue">19%</h1>
+                                            <p>4号线</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel">
+                        <header class="panel-heading">
+                            实时运行状态
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <ul class="goal-progress">
+                                <li>
+                                    <div class="prog-avatar">
+                                        <img src="images/photos/user1.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <div class="title">
+                                            <a href="#">李霖</a> - 1号线-6:00-1车
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                                <span class=""><img src="images/14.png" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prog-avatar">
+                                        <img src="images/photos/user2.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <div class="title">
+                                            <a href="#">郭伟宇</a> - 2号线-5:00-3车
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 91%">
+                                                <span class=""><img src="images/14.png" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prog-avatar">
+                                        <img src="images/photos/user3.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <div class="title">
+                                            <a href="#">黄振</a> - 1号线-5:00-2车
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class=""><img src="images/14.png" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prog-avatar">
+                                        <img src="images/photos/user5.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <div class="title">
+                                            <a href="#">王仁鑫</a> - 2号线-4:00-2车
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                <span class=""><img src="images/14.png" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="text-center"><a href="#">查看更多</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="message-heading">
+                                &nbsp;&nbsp;写消息
+                            </div>
+                            <div class="message-content">
+                                <p><input type="text" class="form-control" placeholder="发送人"></p>
+                                <p><input type="text" class="form-control" placeholder="标题"></p>
+                                <p><textarea type="text" class="form-control" placeholder="消息内容"></textarea></p>
+                                <div class="message-footer"><button class="btn btn-danger">发送</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="panel">
+                        <header class="panel-heading">
+                            未处理邮件
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <ul class="to-do-list" id="sortable-todo">
+                                <li class="clearfix">
+                                    <span class="drag-marker">
+                                    <i></i>
+                                    </span>
+                                    <div class="todo-check pull-left">
+                                        <input type="checkbox" value="None" id="todo-check"/>
+                                        <label for="todo-check"></label>
+                                    </div>
+                                    <p class="todo-title" style="color:#d9534f">
+                                        双林路口北站汽车发生碰撞。
+                                    </p>
+                                    <div class="todo-actionlist pull-right clearfix">
+
+                                        <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="drag-marker">
+                                    <i></i>
+                                    </span>
+                                    <div class="todo-check pull-left">
+                                        <input type="checkbox" value="None" id="todo-check1"/>
+                                        <label for="todo-check1"></label>
+                                    </div>
+                                    <p class="todo-title" style="color:#f0ad4e">
+                                        红星路站车辆等待时间超过一个小时。
+                                    </p>
+                                    <div class="todo-actionlist pull-right clearfix">
+
+                                        <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="drag-marker">
+                                    <i></i>
+                                    </span>
+                                    <div class="todo-check pull-left">
+                                        <input type="checkbox" value="None" id="todo-check2"/>
+                                        <label for="todo-check2"></label>
+                                    </div>
+                                    <p class="todo-title" style="color:#d9534f">
+                                        收到李霖乘客对陈孝则司机的投诉信。 
+                                    </p>
+                                    <div class="todo-actionlist pull-right clearfix">
+
+                                        <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="drag-marker">
+                                    <i></i>
+                                    </span>
+                                    <div class="todo-check pull-left">
+                                        <input type="checkbox" value="None" id="todo-check3"/>
+                                        <label for="todo-check3"></label>
+                                    </div>
+                                    <p class="todo-title" style="color:#d9534f">
+                                        2号线-6:00-1车司机有事缺勤
+                                    </p>
+                                    <div class="todo-actionlist pull-right clearfix">
+
+                                        <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="drag-marker">
+                                    <i></i>
+                                    </span>
+                                    <div class="todo-check pull-left">
+                                        <input type="checkbox" value="None" id="todo-check4"/>
+                                        <label for="todo-check4"></label>
+                                    </div>
+                                    <p class="todo-title" style="color:#f0ad4e">
+                                        2号线-5:00-3车轮胎发生故障等待维修
+                                    </p>
+                                    <div class="todo-actionlist pull-right clearfix">
+
+                                        <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form role="form" class="form-inline">
+                                        <div class="form-group todo-entry">
+                                            <input type="text" placeholder="到邮件列表搜索" class="form-control" style="width: 100%">
+                                        </div>
+                                        <button class="btn btn-primary pull-right" type="submit">+</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portlet portlet-sortable box blue-hoki">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">刷卡信息栏</span>
+                                <span class="caption-helper"></span>
+                            </div>
+                            <div class="actions">
+                                
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="pay">
+                                    <div class="pay-heading">
+                                         <p><span>刷卡人姓名</span><span>刷卡时间</span><span>刷卡方式</span></p>
+                                    </div>
+                                    <div class="pay-content">
+                                        <table id="paytable" class="pay-table">
+                                            <tr class="tr-1"><td>李霖</td><td>9:10</td><td>员工卡</td></td>
+                                            <tr class="tr-2"><td>高铭</td><td>9:14</td><td>员工卡</td></td>
+                                            <tr class="tr-3"><td>何鑫龙</td><td>9:19</td><td>二维码</td></tr>
+                                            <tr class="tr-4"><td>刘成</td><td>9:22</td><td>二维码</td></td>
+                                            <tr><td>郭伟宇</td><td>9:30</td><td>员工卡</td></tr>
+                                            <tr><td>黄振</td><td>9:34</td><td>员工卡</td></td>
+                                            <tr><td>王仁鑫</td><td>9:40</td><td>员工卡</td></tr>
+                                            <tr><td>韩雪</td><td>9:45</td><td>二维码</td></td>
+                                            <tr><td>陈孝则</td><td>9:50</td><td>二维码</td></tr>
+                                            <tr><td>刘八伟</td><td>9:55</td><td>员工卡</td></tr>
+                                            <tr><td>佟二龙</td><td>10:00</td><td>员工卡</td></tr>
+                                            <tr><td>郭向</td><td>10:10</td><td>员工卡</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="popbar">   
+            <div class="message-heading">
+                &nbsp;&nbsp;有新的故障消息
+                <i class="fa fa-times pull-right"></i>
+            </div>
+            <div class="message-content">
+                <p>2号线-6：00-3车在双林路站车胎爆了，请及时处理</p>
+                <p></p>
+                <p></p>
+                <div class="message-footer"><button class="btn btn-danger">查看</button></div>
+            </div>
+         </div>  
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2016 &copy; Busoo by Nihoo
+        </footer>
+        <!--footer section end-->
+    </div>
+
+    <!-- main content end-->
+</section>
+
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--easy pie chart-->
+<script src="js/easypiechart/jquery.easypiechart.js"></script>
+<script src="js/easypiechart/easypiechart-init.js"></script>
+
+<!--Sparkline Chart-->
+<script src="js/sparkline/jquery.sparkline.js"></script>
+<script src="js/sparkline/sparkline-init.js"></script>
+
+<!--Morris Chart-->
+<script src="js/morris-chart/morris2.js"></script>
+<script src="js/morris-chart/raphael-min.js"></script>
+<script src="js/morris-chart/morris.init.js"></script>
+
+<!-- height chart -->
+<script src="js/highcharts.js"></script>
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+<script src="js/jquery.color.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script>
+
+  var table = document.getElementById("paytable");
+  
+  setTimeout("$('.tr-1').slideUp('slow')",1000);
+  setTimeout("$('.tr-2').slideUp('slow')",3000);
+  setTimeout("$('.tr-3').slideUp('slow')",5000);
+  setTimeout("$('.tr-4').slideUp('slow')",9000);
+  new  Morris.Donut({
+        element: 'graph-donut2',
+        data: [
+            {value: 30, label: '2号线乘坐率', formatted: '30%' },
+            {value: 27, label: '1号线乘坐率', formatted: '27%' },
+            {value: 24, label: '3号线乘坐率', formatted: '24%' },
+            {value: 19, label: '4号线乘坐率', formatted: '19%' }
+        ],
+        backgroundColor: 'transparent',
+        labelColor: '#fff',
+        colors: [
+            '#5ab6df','#4bcacc','#6a8bbe','#fb8575'
+        ],
+        formatter: function (x, data) { return data.formatted; }
+    });
+
+  $('#num-1').animateNumber({
+    number: 2300,
+    'font-size': '30px',
+    easing: 'easeInQuad',
+  },
+  2000);
+  $('#num-2').animateNumber({
+    number: 90,
+    'font-size': '30px',
+    easing: 'easeInQuad',
+  },
+  2000);
+  $('#num-3').animateNumber({
+    number: 19,
+    'font-size': '30px',
+    easing: 'easeInQuad',
+  },
+  2000);
+    $('#num-4').animateNumber({
+    number: 244,
+    'font-size': '30px',
+    easing: 'easeInQuad',
+  },
+  2000);
+    setTimeout("$('.popbar').slideDown('slow')",10000);
+    setTimeout("$('.popbar').slideUp('slow')",12000);
+Highcharts.createElement('link', {
+    href: 'http://fonts.googleapis.com/css?family=Dosis:400,600',
+    rel: 'stylesheet',
+    type: 'text/css'
+}, null, document.getElementsByTagName('head')[0]);
+
+Highcharts.theme = {
+    colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+        "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    chart: {
+        backgroundColor: null,
+        style: {
+            fontFamily: "微软雅黑"
+        }
+    },
+    title: {
+        style: {
+            fontSize: '16px',
+            fontWeight: 'normal',
+            textTransform: 'uppercase'
+        }
+    },
+    tooltip: {
+        borderWidth: 0,
+        backgroundColor: 'rgba(219,219,216,0.8)',
+        shadow: false
+    },
+    legend: {
+        itemStyle: {
+            fontWeight: 'normal',
+            fontSize: '14px',
+            fontFamily:'微软雅黑'
+        }
+    },
+    xAxis: {
+        gridLineWidth: 0,
+        labels: {
+            style: {
+                fontSize: '12px'
+            }
+        }
+    },
+    yAxis: {
+        minorTickInterval: 'auto',
+        title: {
+            style: {
+                textTransform: 'uppercase'
+            }
+        },
+        labels: {
+            style: {
+                fontSize: '12px'
+            }
+        }
+    },
+    plotOptions: {
+        candlestick: {
+            lineColor: '#404048'
+        }
+    },
+
+
+    // General
+    background2: '#F0F0EA'
+    
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);
+$('#main-chart1').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '乘坐率最高的7个站点'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['天回镇站', '石门社区站', '一凡大道北站', '一凡大道中站', '太平村站', '太平碑站','利民路口站站']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '乘坐率 (%)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                color:'#6a8abe'
+            }
+        },
+        series: [{
+            name: '乘坐率',
+            data: [98.0, 95.9, 93.5, 92.5, 88.2, 85.5, 85.2]
+        }]
+    });
+$('#main-chart2').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '乘坐率最高的7个班次'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1号线-9:00-1车', '1号线-9:10-2车', '2号线-12:00-6车', '2号线-12:10-4车', '4号线-9:00:5车', '4号线-9:20-7车','7号线-9:00-3车']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '乘坐率 (%)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                color:'#5ab6df'
+            }
+        },
+        series: [{
+            name: '乘坐率',
+            data: [98.0, 97.9, 96.5, 94.5, 88.2, 87.5, 86.2]
+        }]
+    });
+  $('#main-chart4').highcharts({
+        title: {
+            text: '乘坐率最高的四条线路',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: ['周一', '周二', '周三', '周四', '周五', '周六','周日']
+        },
+        yAxis: {
+            title: {
+                text: '乘坐率 (%)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '2号线',
+            data: [78.0, 67.9, 79.5, 74.5, 68.2, 71.5, 85.2]
+        }, {
+            name: '3号线',
+            data: [98.0, 97.9, 99.5, 94.5, 98.2, 91.5, 95.2]
+        }, {
+            name: '4号线',
+            data: [88.0, 87.9, 89.5, 84.5, 88.2, 81.5, 85.2]
+        }, {
+            name: '1号线',
+            data: [68.0, 67.9, 69.5, 64.5, 68.2, 61.5, 65.2]
+        }]
+    });  
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>新增线路</title>
+
+
+
+
+  <!-- Porlet CSS -->
+  <link href="css/components.min.css" rel="stylesheet">
+  <link href="css/plugins.min.css" rel="stylesheet">
+
+  <!--common-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+  <style>
+      .my-drop-zone { border: dotted 3px lightgray; }
+      .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+      .another-file-over-class { border: dotted 3px green; }
+  </style>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index2.html"><img src="images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index2.html"><img src="images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="linestatus.html"><i class="fa fa-home"></i> <span>线路状态</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="businfo.html"> 车辆信息</a></li>
+                        <li><a href="oil_view.html"> 燃油记录</a></li>
+                        <li><a href="accident_view.html"> 事故记录</a></li>
+                        <li><a href="fault_view.html"> 故障记录</a></li>
+                        <li><a href="repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li class="menu-list active"><a href=""><i class="fa fa-book"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="station.html"> 站点管理</a></li>
+                        <li><a href="line.html"> 线路管理</a></li>
+                        <li class="active"><a href="addline-1.html"> 新增线路</a></li>
+                        <li><a href="updateline.html"> 线路优化</a></li>
+                        <li><a href="ridetate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="administrators.html"> 管理员管理</a></li>
+                        <li><a href="power.html"> 角色管理</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="driver.html"> 司机信息管理</a></li>
+                        <li><a href="dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                
+
+                <li><a href="employee.html"><i class="fa fa-bullhorn"></i> <span>员工信息管理</span></a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> <span>登录页</span></a></li>
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">You have 5 Mails </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jonathan Smith</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jane Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Mark Henry</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jim Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">Read All Mails</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">Notifications</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #1 overloaded.  </span>
+                                        <em class="small">34 mins</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #3 overloaded.  </span>
+                                        <em class="small">1 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #5 overloaded.  </span>
+                                        <em class="small">4 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #31 overloaded.  </span>
+                                        <em class="small">4 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">See All Notifications</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+ 
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portlet light portlet-fit ">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class=" icon-layers font-green"></i>
+                                <span class="caption-subject font-green bold uppercase">上传员工地址坐标（Excel）</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="mt-element-step">
+                                <div class="row step-background">
+                                    <div class="mt-step-desc">
+                                        <div class="font-dark bold uppercase"></div>
+                                    <br/> 
+                                    </div>
+                                        <div class="col-md-3 bg-grey-steel mt-step-col active">
+                                        <div class="mt-step-number">1</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">员工地址表</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">导入坐标到地图</div>
+                                    </div>
+                                    <div class="col-md-3 bg-grey-steel mt-step-col">
+                                        <div class="mt-step-number">2</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">地址生成站点</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">聚合算法最佳站点</div>
+                                    </div>
+                                    <div class="col-md-3 bg-grey-steel mt-step-col">
+                                        <div class="mt-step-number">3</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">站点生成线路</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">最佳路线匹配</div>
+                                    </div>
+                                    <div class="col-md-3 bg-grey-steel mt-step-col">
+                                        <div class="mt-step-number">4</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">最终线路调整</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">手动调整线路数</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div ng-controller="AppController" class="import-bar">
+                                        
+                                        <div class="col-md-3">
+
+                                            <h3>选择文件</h3>
+
+                                            <div ng-show="uploader.isHTML5">
+                                                <!-- 3. nv-file-over uploader="link" over-class="className" -->
+                                                <div class="well my-drop-zone" nv-file-over="" uploader="uploader">
+                                                    拖动文件上传
+                                                </div>
+
+                                                <!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+                                            </div>
+
+                                            <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+                                            批量上传
+                                            <input type="file" nv-file-select="" uploader="uploader" multiple  /><br/>
+
+                                            单独上传
+                                            <input type="file" nv-file-select="" uploader="uploader" />
+                                        </div>
+
+                                        <div class="col-md-9" style="margin-bottom: 40px">
+
+                                            <h3>上传列表</h3>
+                                            <p>列表长度: {{ uploader.queue.length }}</p>
+
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="50%">文件名</th>
+                                                        <th ng-show="uploader.isHTML5">大小</th>
+                                                        <th ng-show="uploader.isHTML5">进度</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="item in uploader.queue">
+                                                        <td><strong>{{ item.file.name }}</strong></td>
+                                                        <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                                        <td ng-show="uploader.isHTML5">
+                                                            <div class="progress" style="margin-bottom: 0;">
+                                                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                                                            <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                                            <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                                                        </td>
+                                                        <td nowrap>
+                                                            <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                                <span class="glyphicon glyphicon-upload"></span> 上传
+                                                            </button>
+                                                            <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                                                <span class="glyphicon glyphicon-ban-circle"></span> 取消
+                                                            </button>
+                                                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                                <span class="glyphicon glyphicon-trash"></span> 移除
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div>
+                                                <div>
+                                                    列表总进度:
+                                                    <div class="progress" style="">
+                                                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                                                    <span class="glyphicon glyphicon-upload"></span> 上传所有
+                                                </button>
+                                                <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
+                                                    <span class="glyphicon glyphicon-ban-circle"></span> 取消所有
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                                                    <span class="glyphicon glyphicon-trash"></span> 移除所有
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="station-create">
+                                    <a href="addline-2.html" class="btn btn-primary">点击导入坐标到地图</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--  -->
+                </div>
+            </div>
+        </div>
+        <!--footer section start-->
+        <footer>
+            2014 &copy; AdminEx by ThemeBucket
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--icheck -->
+<script src="js/iCheck/jquery.icheck.js"></script>
+<script src="js/icheck-init.js"></script>
+
+<!--  angularjs -->
+<script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+<script src="js/angular-file-upload.min.js"></script>
+<script src="js/controllers.js"></script>
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+<script src="js/linestatus.js"></script>
+
+</body>
+</html>

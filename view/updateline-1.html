@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>AdminX</title>
+
+
+  <style>
+      .my-drop-zone { border: dotted 3px lightgray; }
+      .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+      .another-file-over-class { border: dotted 3px green; }
+
+      html, body { height: 100%; }
+  </style>
+
+ 
+  <!-- Porlet css -->
+  <link href="../css/components.min.css" rel="stylesheet">
+  <link href="../css/plugins.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../css/iziModal.min.css" />
+
+  <!--common-->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/style-responsive.css" rel="stylesheet">
+
+  <link href="../css/styles.css" rel="stylesheet">
+  <script src="../js/modernizr.js" type="text/javascript"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header" onLoad="mapInit()">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index2.html"><img src="../images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index2.html"><img src="../images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="../images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="linestatus.html"><i class="fa fa-road"></i> <span>线路状态</span></a></li>
+                <li class="menu-list active"><a href=""><i class="fa fa-eraser"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="station.html"> 站点管理</a></li>
+                        <li><a href="line.html"> 线路管理</a></li>
+                        <li><a href="addline-1.html"> 新增线路</a></li>
+                        <li class="active"><a href="updateline-1.html"> 线路优化</a></li>
+                        <li><a href="riderate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-truck"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="businfo.html"> 车辆信息</a></li>
+                        <li><a href="oil_view.html"> 燃油记录</a></li>
+                        <li><a href="accident_view.html"> 事故记录</a></li>
+                        <li><a href="fault_view.html"> 故障记录</a></li>
+                        <li><a href="repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="employee.html"><i class="fa fa-users"></i> <span>员工信息管理</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-user-md"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="driver.html"> 司机信息管理</a></li>
+                        <li><a href="dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-user"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="administrators.html"> 管理员管理</a></li>
+                        <li><a href="power.html"> 角色管理</a></li>
+                    </ul>
+                </li>     
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="../index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="搜索" />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">你有4封邮件 </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">郭伟宇 <span class="badge badge-success">new</span></span>
+                                          <span class="msg">司机发来的故障信息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">黄振</span>
+                                          <span class="msg">司机发来的维修消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">陈孝则</span>
+                                          <span class="msg">司机发来的事故消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">李霖</span>
+                                          <span class="msg">司机发来的故障消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name"> 韩雪乘客的投诉消息 </span>
+                                        <em class="small">34 分钟前</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">王仁鑫乘客的投诉消息  </span>
+                                        <em class="small">1 小时前</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="../images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+ 
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portlet light portlet-fit ">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class=" icon-layers font-green"></i>
+                                <span class="caption-subject font-green bold uppercase">乘坐率一键检测</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="mt-element-step">
+                                <div class="row step-background">
+                                    <div class="mt-step-desc">
+                                        <div class="font-dark bold uppercase"></div>
+                                    <br/> 
+                                    </div>
+                                        <div class="col-md-6 bg-grey-steel mt-step-col active">
+                                        <div class="mt-step-number">1</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">扫描站点&线路&班次乘坐率</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">乘坐率全面检测</div>
+                                    </div>
+                                    <div class="col-md-6 bg-grey-steel mt-step-col">
+                                        <div class="mt-step-number">2</div>
+                                        <div class="mt-step-title uppercase font-grey-cascade">推荐优化站点&线路&班次</div>
+                                        <div class="mt-step-content font-grey-cascade" style="margin-top:5px">一键优化提升乘坐率</div>
+                                    </div>
+                                </div>
+                                <div class="station-create">
+                                    <a id="scan" href="javascript:void(0);" class="btn btn-danger" style="height:429px;background-color:#c2dee0;border:1px solid #b4ccff;" onclick=progressGo(1)><img onmousemove=imgCover(this) onmouseout=imgOut(this) src="../images/start.png" width="350px" height="101px" style="margin-top:150px" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--  -->
+                </div>
+
+                <div class="col-md-12" >
+                    <div ng-controller="AppController" class="import-bar" style="border:1px solid transparent;min-height: 100px;background-color: #fff">
+                        <div class="updating">
+                            <div class="jq22-container jq22-container-1 ">
+                                <header class="jq22-header jq22-header-1">
+                                    <h3 class="s0">正在扫描站点</h3>
+                                    <p class="s1" style="display: block;">正在扫描酱园街站</p>
+                                    <p class="s2">正在扫描驿都大道西路站</p>
+                                    <p class="s3">正在扫描二环路东四段站</p>
+                                    <p class="s4">正在扫描二环路东一段站</p>
+                                    <p class="s5">正在扫描驿都大道西路站</p>
+                                    <p class="s6">正在扫描上沙河铺街站</p>
+                                    <p class="s7">正在扫描二环路东五段站</p>
+                                    <p class="s8">正在扫描二环高架路站</p>
+                                    <p class="s9">正在扫描二环高架路站</p>
+                                    <p class="s10">正在扫描二环路北四段站</p>
+                                    <p class="s11">正在扫描二环八里桥路站</p>
+                                    <p class="s12">正在扫描站北路站</p> 
+                                    <p class="s13">正在扫描二环路东六段站</p>
+                                    <p class="s14">正在扫描二环高架路站</p>
+                                    <h3 class="s15">扫描完毕！</h3>
+
+                                </header>
+                                
+                                <div class="jq22-content jq22-content-1">
+                                    <div class="progress progress-1">
+                                      <b class="progress__bar progress__bar-1">
+                                        <span class="progress__text">
+                                          进度: <em>0%</em>
+                                        </span>
+                                      </b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="updating">
+                            <div class="jq22-container jq22-container-2">
+                                <header class="jq22-header jq22-header-2">
+                                    <h3 class="l0">正在扫描线路</h3>
+                                    <p class="l1" style="display: block;">正在扫描1号线</p>
+                                    <p class="l2">正在扫描2号线</p>
+                                    <p class="l3">正在扫描3号线</p>
+                                    <p class="l4">正在扫描4号线</p>
+                                    <h3 class="l5">扫描完毕！</h3>
+                                </header>
+                                <div class="jq22-content jq22-content-2">
+                                    <div class="progress progress-2">
+                                      <b class="progress__bar progress__bar-2">
+                                        <span class="progress__text">
+                                          进度: <em>0%</em>
+                                        </span>
+                                      </b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="updating">
+                            <div class="jq22-container jq22-container-3">
+                                <header class="jq22-header jq22-header-3">
+                                    <h3 class="r0">正在扫描班次</h3>
+                                    <p class="r1" style="display: block;">正在扫描1号线-8:00-1车</p>
+                                    <p class="r2">正在1号线-8:10-2车</p>
+                                    <p class="r3">正在1号线-8:20-3车</p>
+                                    <p class="r4">正在1号线-8:30-4车</p>
+                                    <p class="r5">正在1号线-17:00-5车</p>
+                                    <p class="r6">正在1号线-17:10-6车</p>
+                                    <p class="r7">正在1号线-17:20-7车</p>
+                                    <p class="r8">正在1号线-17:30-8车</p>
+                                    <p class="r9">正在2号线-8:10-9车</p>
+                                    <p class="r10">正在2号线-8:20-10车</p>
+                                    <p class="r11">正在2号线-8:30-11车</p>
+                                    <p class="r12">正在2号线-17:10-12车</p>
+                                    <p class="r13">正在2号线-17:20-13车</p>
+                                    <p class="r14">正在2号线-17:30-14车</p>
+                                    <p class="r15">正在2号线-17:40-15车</p>
+                                    <h3 class="r16">扫描完毕！</h3>
+
+                                </header> 
+                                <div class="jq22-content jq22-content-3">
+                                    <div class="progress progress-3">
+                                      <b class="progress__bar progress__bar-3">
+                                        <span class="progress__text">
+                                          进度: <em>0%</em>
+                                        </span>
+                                      </b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+        </div>
+        <!--footer section start-->
+        <footer>
+            2016 &copy; Bussoo by NiHoo
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+
+    <div id="modal-prompt" class="modal-default" style="margin-left:2%;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                     <h3 align="center">扫描完成</h3>
+                </div>
+            </div>
+             <div class="col-md-6" style="text-align: center;">
+                <div class="left"><a id="sure" onclick=closeModal() href="javascript:void(0)" class="btn btn-info" style="padding:7px 28px">确认</a></div> 
+            </div>
+
+            <div class="col-md-6" style="text-align: center;">
+                <div class="right"><a href="javascript:void(0)" class="btn btn-info" style="padding:7px 28px">否</a></div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+
+<!--iziModal动态弹窗-->
+<script src="../js/iziModal.min.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../js/scripts.js"></script>
+
+
+<script>
+
+    function closeModal(){
+        $('#modal-prompt').iziModal('close');
+        setTimeout("location.href = 'updateline-2.html'",500);
+    }
+
+    function imgCover(obj){
+        obj.src = "../images/finish.png";
+    }
+
+    function imgOut(obj){
+        obj.src = "../images/start.png";
+    }
+
+    $("#modal").iziModal();
+    $("#modal-prompt").iziModal({
+        title: "扫描完毕，即将跳转到优化页面！",
+        subtitle: "",
+        iconClass: 'icon-announcement',
+        width: 300,
+        padding: 20
+    });
+
+    function stationChange(m){
+        if(m == 1){
+            $(".jq22-header-1").children(".s" + m).show("slow");
+        }    
+        $(".jq22-header-1").children(".s" + (m-1)).hide("slow");
+        $(".jq22-header-1").children(".s" + m).slideDown("slow");
+    }
+    function lineChange(m){
+        if(m == 1){
+            $(".jq22-header-2").children(".l" + m).show("slow");
+        }    
+        $(".jq22-header-2").children(".l" + (m-1)).hide("slow");
+        $(".jq22-header-2").children(".l" + m).slideDown("slow");
+    }
+    function roastChange(m){
+        if(m == 1){
+            $(".jq22-header-3").children(".r" + m).show("slow");
+        }    
+        $(".jq22-header-3").children(".r" + (m-1)).hide("slow");
+        $(".jq22-header-3").children(".r" + m).slideDown("slow");
+    }
+    function progressGo(n){
+        $("#scan").slideUp("slow");
+        $(".jq22-header-" + n).slideDown("slow");
+        $(".progress-" + n).css("display","block");
+        // $(".jq22-container").addClass('progress__bar--red');
+        $(".jq22-container-" + n).css("backgroundColor","#fff");
+        $(".jq22-container-" + n).css("opacity","0.7");
+        $(".jq22-container-" + (n-1)).slideUp("slow");
+        if(n == 1){
+            var $progress = $('.progress-1'), $bar = $('.progress__bar-1'), $text = $('.progress__text'), percent = 0, update, resetColors, speed = 10, orange = 30, yellow = 55, green = 85, timer;
+            resetColors = function () {
+                $bar.removeClass('progress__bar--green').removeClass('progress__bar--yellow').removeClass('progress__bar--orange').removeClass('progress__bar--blue');
+                $progress.removeClass('progress--complete');
+            };
+
+            update = function () {
+                timer = setTimeout(function () {
+                    percent += Math.random() * 18;
+                    percent = parseFloat(percent.toFixed(1));
+                    $text.find('em').text(percent + '%');
+                    if (percent >= 100) {
+                        percent = 100;
+                        $progress.addClass('progress--complete');
+                        $bar.addClass('progress__bar--blue');
+                        // $(".jq22-container").addClass('progress__bar--blue');
+                        // $("#scan").addClass('progress__bar--blue');
+                        $text.find('em').text('完成');
+                    } else {
+                        if (percent >= green) {
+                            // $(".jq22-container").addClass('progress__bar--green');
+                            $bar.addClass('progress__bar--green');
+                        } else if (percent >= yellow) {
+                            // $(".jq22-container").addClass('progress__bar--yellow');
+                            $bar.addClass('progress__bar--yellow');
+                        } else if (percent >= orange) {
+                            // $(".jq22-container").addClass('progress__bar--orange');
+                            $bar.addClass('progress__bar--orange');
+                        }
+                        speed = Math.floor(Math.random() * 900);
+                        update();
+                    }
+                    $bar.css({ width: percent + '%' });
+                    if(percent >= 5 && percent <= 7){
+                        stationChange(2);    
+                    }
+                    else if(percent >= 13 && percent <= 15){
+                        stationChange(3);   
+                    }
+                    else if(percent >= 19 && percent <= 21){
+                        stationChange(4);    
+                    }
+                    else if(percent >= 24 && percent <= 26){
+                        stationChange(5);    
+                    }
+                    else if(percent >= 28 && percent <= 30){
+                        stationChange(6);    
+                    }
+                    else if(percent >= 34 && percent <= 36){
+                        stationChange(7);    
+                    }
+                    else if(percent >= 39 && percent <= 41){
+                        stationChange(8);    
+                    }
+                    else if(percent >= 45 && percent <= 47){
+                        stationChange(9);    
+                    }
+                    else if(percent >= 51 && percent <= 53){
+                        stationChange(10);    
+                    }
+                    else if(percent >= 56 && percent <= 58){
+                        stationChange(11);    
+                    }
+                    else if(percent >= 68 && percent <= 70){
+                        stationChange(12);    
+                    }
+                    else if(percent >= 79 && percent <= 81){
+                        stationChange(13);    
+                    }
+                    else if(percent >= 88 && percent <= 90){
+                        stationChange(14);    
+                    }
+
+                    else if(percent >= 100){
+                        $(".jq22-header-1").children(".s0").hide("slow");
+                        stationChange(15);    
+                        setTimeout(progressGo(2),1000);
+                    }
+                }, speed);
+            };
+            setTimeout(function () {
+                $progress.addClass('progress--active');
+
+                update();
+            }, 10);
+
+        } 
+        else if(n == 2){
+            var $progress = $('.progress-2'), $bar = $('.progress__bar-2'), $text = $('.progress__text'), percent = 0, update, resetColors, speed = 10, orange = 30, yellow = 55, green = 85, timer;
+            resetColors = function () {
+                $bar.removeClass('progress__bar--green').removeClass('progress__bar--yellow').removeClass('progress__bar--orange').removeClass('progress__bar--blue');
+                $progress.removeClass('progress--complete');
+            };
+
+            update = function () {
+                timer = setTimeout(function () {
+                    percent += Math.random() * 18;
+                    percent = parseFloat(percent.toFixed(1));
+                    $text.find('em').text(percent + '%');
+                    if (percent >= 100) {
+                        percent = 100;
+                        $progress.addClass('progress--complete');
+                        $bar.addClass('progress__bar--blue');
+                        // $(".jq22-container").addClass('progress__bar--blue');
+                        // $("#scan").addClass('progress__bar--blue');
+                        $text.find('em').text('完成');
+                    } else {
+                        if (percent >= green) {
+                            // $(".jq22-container").addClass('progress__bar--green');
+                            $bar.addClass('progress__bar--green');
+                        } else if (percent >= yellow) {
+                            // $(".jq22-container").addClass('progress__bar--yellow');
+                            $bar.addClass('progress__bar--yellow');
+                        } else if (percent >= orange) {
+                            // $(".jq22-container").addClass('progress__bar--orange');
+                            $bar.addClass('progress__bar--orange');
+                        }
+                        speed = Math.floor(Math.random() * 900);
+                        update();
+                    }
+                    $bar.css({ width: percent + '%' });
+                    if(percent >= 20 && percent <= 30){
+                        lineChange(2);    
+                    }
+                    else if(percent >= 30 && percent <= 40){
+                        lineChange(3);    
+                    }
+                    else if(percent >= 70 && percent <= 80){
+                        lineChange(4);      
+                    }
+                    else if(percent >= 100){
+                        $(".jq22-header-2").children(".l0").hide("slow");
+                        lineChange(6); 
+                        setTimeout(progressGo(3),1000);   
+                    }
+                }, speed);
+            };
+            setTimeout(function () {
+                $progress.addClass('progress--active');
+
+                update();
+            }, 10);
+
+        } 
+        else if(n == 3){
+            var $progress = $('.progress-3'), $bar = $('.progress__bar-3'), $text = $('.progress__text'), percent = 0, update, resetColors, speed = 10, orange = 30, yellow = 55, green = 85, timer;
+            resetColors = function () {
+                $bar.removeClass('progress__bar--green').removeClass('progress__bar--yellow').removeClass('progress__bar--orange').removeClass('progress__bar--blue');
+                $progress.removeClass('progress--complete');
+            };
+
+            update = function () {
+                timer = setTimeout(function () {
+                    percent += Math.random() * 18;
+                    percent = parseFloat(percent.toFixed(1));
+                    $text.find('em').text(percent + '%');
+                    if (percent >= 100) {
+                        percent = 100;
+                        $progress.addClass('progress--complete');
+                        $bar.addClass('progress__bar--blue');
+                        // $(".jq22-container").addClass('progress__bar--blue');
+                        // $("#scan").addClass('progress__bar--blue');
+                        $text.find('em').text('完成');
+                    } else {
+                        if (percent >= green) {
+                            // $(".jq22-container").addClass('progress__bar--green');
+                            $bar.addClass('progress__bar--green');
+                        } else if (percent >= yellow) {
+                            // $(".jq22-container").addClass('progress__bar--yellow');
+                            $bar.addClass('progress__bar--yellow');
+                        } else if (percent >= orange) {
+                            // $(".jq22-container").addClass('progress__bar--orange');
+                            $bar.addClass('progress__bar--orange');
+                        }
+                        speed = Math.floor(Math.random() * 900);
+                        update();
+                    }
+                    $bar.css({ width: percent + '%' });
+                    if(percent >= 5 && percent <= 7){
+                        roastChange(2);    
+                    }
+                    else if(percent >= 13 && percent <= 15){
+                        roastChange(3);   
+                    }
+                    else if(percent >= 19 && percent <= 21){
+                        roastChange(4);    
+                    }
+                    else if(percent >= 24 && percent <= 26){
+                        roastChange(5);    
+                    }
+                    else if(percent >= 28 && percent <= 30){
+                        roastChange(6);    
+                    }
+                    else if(percent >= 34 && percent <= 36){
+                        roastChange(7);    
+                    }
+                    else if(percent >= 39 && percent <= 41){
+                        roastChange(8);    
+                    }
+                    else if(percent >= 45 && percent <= 47){
+                        roastChange(9);    
+                    }
+                    else if(percent >= 51 && percent <= 53){
+                        roastChange(10);    
+                    }
+                    else if(percent >= 56 && percent <= 58){
+                        roastChange(11);    
+                    }
+                    else if(percent >= 68 && percent <= 70){
+                        roastChange(12);    
+                    }
+                    else if(percent >= 74 && percent <= 76){
+                        roastChange(13);    
+                    }
+                    else if(percent >= 80 && percent <= 82){
+                        roastChange(14);    
+                    }
+                    else if(percent >= 87 && percent <= 89){
+                        roastChange(15);    
+                    } 
+                    else if(percent >= 100){
+                        $(".jq22-header-3").children(".r0").hide("slow");
+                        roastChange(16);    
+                        $('#modal-prompt').iziModal('open');
+                        
+                    }
+                }, speed);
+            };
+            setTimeout(function () {
+                $progress.addClass('progress--active');
+
+                update();
+            }, 10);
+        }    
+    }
+        
+</script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>司机排班</title>
+
+  <!--calendar css-->
+  <link href="../js/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+
+<!-- Porlet css -->
+  <link href="../css/components.min.css" rel="stylesheet">
+  <link href="../css/plugins.min.css" rel="stylesheet">
+
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/style-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index2.html"><img src="../images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index2.html"><img src="../images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="../images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="linestatus.html"><i class="fa fa-road"></i> <span>线路状态</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-eraser"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="station.html"> 站点管理</a></li>
+                        <li><a href="line.html"> 线路管理</a></li>
+                        <li><a href="addline-1.html"> 新增线路</a></li>
+                        <li><a href="updateline-1.html"> 线路优化</a></li>
+                        <li><a href="riderate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-truck"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="businfo.html"> 车辆信息</a></li>
+                        <li><a href="oil_view.html"> 燃油记录</a></li>
+                        <li><a href="accident_view.html"> 事故记录</a></li>
+                        <li><a href="fault_view.html"> 故障记录</a></li>
+                        <li><a href="repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="employee.html"><i class="fa fa-users"></i> <span>员工信息管理</span></a></li>
+                <li class="menu-list active"><a href=""><i class="fa fa-user-md"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="driver.html"> 司机信息管理</a></li>
+                        <li class="active"><a href="dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-user"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="administrators.html"> 管理员管理</a></li>
+                        <li><a href="power.html"> 角色管理</a></li>
+                    </ul>
+                </li>     
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="../index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="搜索" />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">你有4封邮件 </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">郭伟宇 <span class="badge badge-success">new</span></span>
+                                          <span class="msg">司机发来的故障信息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">黄振</span>
+                                          <span class="msg">司机发来的维修消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">陈孝则</span>
+                                          <span class="msg">司机发来的事故消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">李霖</span>
+                                          <span class="msg">司机发来的故障消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name"> 韩雪乘客的投诉消息 </span>
+                                        <em class="small">34 分钟前</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">王仁鑫乘客的投诉消息  </span>
+                                        <em class="small">1 小时前</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="../images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="row">
+            <div class="col-md-7">
+                <div class="page-heading">
+                    <h3>
+                        司机排班
+                    </h3>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="#">司机管理</a>
+                        </li>
+                        <li class="active">  司机排班管理  </li>
+                    </ul>
+            
+                </div>
+            </div> 
+             <div class="col-md-5">
+                <a href="dutyroaster-2.html" class="btn btn-info" style="float:right;margin-top:30px;margin-right:31px;height:40px;width:200px;font-size:18px;">查看以往排班</a>
+             </div>  
+        </div>
+        
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+
+            <!-- page start-->
+            <div class="row">
+                <aside class="col-md-3">
+                    <h4 class="drg-event-title">排班事件标签</h4>
+                    <div id='external-events'>
+                        <div class='external-event label label-primary'>1号线</div>
+                        <div class='external-event label label-primary'>2号线</div>
+                        <div class='external-event label label-primary'>3号线</div>
+                        <div class='external-event label label-primary'>4号线</div>
+                        <div class='external-event label label-primary'>5号线</div>
+                        <div class='external-event label label-primary'>6号线</div>
+                        <div class='external-event label label-primary'>7号线</div>
+                        <div class='external-event label label-primary'>8号线</div>
+                        <div class='external-event label label-warning'>9点</div>
+                        <div class='external-event label label-warning'>10点</div>
+                        <div class='external-event label label-warning'>17点</div>
+                        <div class='external-event label label-warning'>18点</div>
+                        <div class='external-event label label-warning'>19点</div>
+                        <div class='external-event label label-info'>1车</div>
+                        <div class='external-event label label-info'>2车</div>
+                        <div class='external-event label label-info'>3车</div>
+                        <div class='external-event label label-info'>4车</div>
+                        <div class='external-event label label-info'>5车</div>
+                        <div class='external-event label label-info'>6车</div>
+                        <div class='external-event label label-info'>7车</div>
+                        <div class='external-event label label-info'>8车</div>
+                        <br/>
+                    </div>
+
+                    <h4 class="drg-event-title" style="margin-top:40px">选择排班司机</h4>
+
+                    <div id='external-events'>
+                        <div class="external-event btn green">李林</div>
+                        <div class="external-event btn blue">郭伟宇</div>
+                        <div class="external-event btn purple">陈孝则</div>
+                        <div class="external-event btn red">黄振</div>
+                        <div class="external-event btn yellow">高铭</div>
+                        <div class="external-event btn dark">王仁鑫</div>
+                        <div class="external-event btn default">韩雪</div>
+                    </div>
+
+                    <div class="submit-all">
+                        <a href="dutyroaster-2.html" class="btn red" style="display:block">保存排班</a>
+                    </div>
+                </aside>
+                <aside class="col-md-9">
+                    <section class="panel">
+                        <div id="calendar" class="has-toolbar"></div>
+                    </section>
+                </aside>
+
+            </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <!--<footer class="">-->
+            <!--2016 &copy; Busoo by Nihoo-->
+        <!--</footer>-->
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+
+<script src="../js/fullcalendar/fullcalendar.js"></script>
+<script src="../js/external-dragging-calendar.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>维修记录</title>
+
+<!-- Porlet css -->
+  <link href="../css/components.min.css" rel="stylesheet">
+  <link href="../css/plugins.min.css" rel="stylesheet">
+  <!--common-->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/style-responsive.css" rel="stylesheet">
+
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index2.html"><img src="../images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index2.html"><img src="../images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="../images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="linestatus.html"><i class="fa fa-road"></i> <span>线路状态</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-eraser"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="station.html"> 站点管理</a></li>
+                        <li><a href="line.html"> 线路管理</a></li>
+                        <li><a href="addline-1.html"> 新增线路</a></li>
+                        <li><a href="updateline-1.html"> 线路优化</a></li>
+                        <li><a href="riderate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list active"><a href=""><i class="fa fa-truck"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="businfo.html"> 车辆信息</a></li>
+                        <li><a href="oil_view.html"> 燃油记录</a></li>
+                        <li><a href="accident_view.html"> 事故记录</a></li>
+                        <li><a href="fault_view.html"> 故障记录</a></li>
+                        <li class="active"><a href="repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="employee.html"><i class="fa fa-users"></i> <span>员工信息管理</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-user-md"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="driver.html"> 司机信息管理</a></li>
+                        <li><a href="dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-user"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="administrators.html"> 管理员管理</a></li>
+                        <li><a href="power.html"> 角色管理</a></li>
+                    </ul>
+                </li>     
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="../index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="搜索" />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">你有4封邮件 </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">郭伟宇 <span class="badge badge-success">new</span></span>
+                                          <span class="msg">司机发来的故障信息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">黄振</span>
+                                          <span class="msg">司机发来的维修消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">陈孝则</span>
+                                          <span class="msg">司机发来的事故消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">李霖</span>
+                                          <span class="msg">司机发来的故障消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name"> 韩雪乘客的投诉消息 </span>
+                                        <em class="small">34 分钟前</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">王仁鑫乘客的投诉消息  </span>
+                                        <em class="small">1 小时前</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="../images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                维修记录
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li class="active"> 维修记录管理</li>
+            </ul>
+            <div class="state-info">
+                <section class="panel">
+                  
+                </section>
+                <section class="panel">
+
+                </section>
+            </div>
+        </div>
+        <!-- page heading end-->
+
+        <div class="col-md-12"  style="margin-bottom:10px;margin-top:10px">
+            <div class="clearfix">
+                <div class="btn-group">
+                    <button id="editable-sample_new" class="btn btn-primary">
+                        添加 <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">工具<i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#">打印</a></li>
+                        <li><a href="#">从Excel导入</a></li>
+                        <li><input type="file" id="file"><a href="javascript:void(0);"> 导出到Excel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row" id="sortable_portlets">
+                <div class="col-md-6 column sortable">
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">一汽</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus1.jpg
+                                    " alt="">                         
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">一汽</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus4.jpg
+                                    " alt="">                         
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">一汽</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus4.jpg
+                                    " alt="">                         
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- empty sortable porlet required for each columns! -->
+                    <div class="portlet portlet-sortable-empty"> </div>
+                </div>
+                <div class="col-md-6 column sortable">
+                
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">东风</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus2.jpg
+                                    " alt="">                         
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">东风</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus5.jpg
+                                    " alt="">                         
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="portlet portlet-sortable light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green-sharp">
+                                <i class="icon-speech font-green-sharp"></i>
+                                <span class="caption-subject bold uppercase">维修记录</span>
+                                <span class="caption-helper">东风</span>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="btn btn-default btn-sm">
+                                    <i class="fa fa-pencil"></i> 编辑 </a>
+                                
+                                <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-times"></i> 删除 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="busimg">
+                                        <img src="../images/buses/bus5.jpg
+                                    " alt="">                         
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>车牌号:川A 43543</p>
+                                    <p>时间:2016.8.3</p>
+                                    <p>地点:春熙路加油站</p>
+                                    <p>油量：25L&nbsp;&nbsp;&nbsp; 单价：1元</p>
+                                    <p>总价：25元&nbsp;&nbsp;&nbsp; 负责人：陈孝则</p>
+
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- empty sortable porlet required for each columns! -->
+                    <div class="portlet portlet-sortable-empty"> </div>
+                </div>
+            </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2016 &copy; Busoo by Nihoo
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery.slimscroll.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script src="../js/portlet-draggable.min.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>

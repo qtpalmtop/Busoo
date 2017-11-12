@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>乘坐率</title> 
+
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+
+  <!-- iziModal -->
+  <link rel="stylesheet" type="text/css" href="../css/iziModal.min.css" />
+  <link href="../css/style-responsive.css" rel="stylesheet">
+  <script src="../js/modernizr.js" type="text/javascript"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="../index.html"><img src="../images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="../index.html"><img src="../images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="../images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">高铭</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                <li><a href="linestatus.html"><i class="fa fa-road"></i> <span>线路状态</span></a></li>
+                <li class="menu-list active"><a href=""><i class="fa fa-eraser"></i> <span>线路信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="station.html"> 站点管理</a></li>
+                        <li><a href="line.html"> 线路管理</a></li>
+                        <li><a href="addline-1.html"> 新增线路</a></li>
+                        <li class="active"><a href="updateline-1.html"> 线路优化</a></li>
+                        <li><a href="riderate.html"> 乘坐率</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-truck"></i> <span>车辆信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="businfo.html"> 车辆信息</a></li>
+                        <li><a href="oil_view.html"> 燃油记录</a></li>
+                        <li><a href="accident_view.html"> 事故记录</a></li>
+                        <li><a href="fault_view.html"> 故障记录</a></li>
+                        <li><a href="repair_view.html"> 维修记录</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="employee.html"><i class="fa fa-users"></i> <span>员工信息管理</span></a></li>
+                <li class="menu-list"><a href=""><i class="fa fa-user-md"></i> <span>司机管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="driver.html"> 司机信息管理</a></li>
+                        <li><a href="dutyroaster.html"> 司机排班</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-user"></i> <span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="administrators.html"> 管理员管理</a></li>
+                        <li><a href="power.html"> 角色管理</a></li>
+                    </ul>
+                </li>     
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="../index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="搜索" />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">你有4封邮件 </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">郭伟宇 <span class="badge badge-success">new</span></span>
+                                          <span class="msg">司机发来的故障信息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">黄振</span>
+                                          <span class="msg">司机发来的维修消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">陈孝则</span>
+                                          <span class="msg">司机发来的事故消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="../images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">李霖</span>
+                                          <span class="msg">司机发来的故障消息...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name"> 韩雪乘客的投诉消息 </span>
+                                        <em class="small">34 分钟前</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">王仁鑫乘客的投诉消息  </span>
+                                        <em class="small">1 小时前</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="../images/photos/user-avatar.png" alt="" />
+                            高铭
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  个人信息</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  设置</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                线路优化
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">线路信息管理</a>
+                </li>
+                <li class="active">线路优化</li>
+            </ul>
+        </div>
+        <!-- page heading end-->
+        <hr/>
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="col-md-12">
+                <div class="update">
+                    <a id="updateall" href="javascript:void(0)" style="color:#65cea7;background-color: #fff;border-color: #65cea7;font-size:18px;width:100%;margin-bottom:20px;position: relative;z-index: 999;" class="btn btn-primary" onmouseout=changeColor(this,2) onmouseover=changeColor(this,1) onclick=progressGo(4)>一键全部优化</a>
+                </div>
+                <div class="updating" style="margin-top:-65px">
+                    <div class="jq22-container">
+                        <header class="jq22-header">
+                            <h3>正在优化站点</h3>
+
+                        </header>
+                        
+                        <div class="jq22-content" style="background-color: #fff;">
+                            <div class="progress progress-5" style="height:44px">
+                              <b class="progress__bar progress__bar-5">
+                                <span class="progress__text progress__text-5" style="margin-left:0px;font-size:18px;line-height: 2">
+                                  进度: <em>0%</em>
+                                </span>
+                              </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nice nice-4" style="position: absolute;width:150px;top:-73px;right:44%;opacity: 0;z-index: 0">
+                    <img src="../images/nice.png" alt="">
+                </div>
+            </div> 
+            <div class="col-md-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                    站点乘坐率统计
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="riderate">
+                          <div class="riderate-title">
+                            数据分析
+                          </div>
+                          <div class="row">
+                             <div class="col-md-12" style="padding: 0">
+                                <div class="chart-hedding">
+                                    <div class="chart-select">
+                                      <div class="select-item">
+                                        <select name="" class="form-control select-form " id="data-selected">
+                                          <option value="-1" disabled>请选择线路</option>
+                                          <option value="1" selected="selected">1号线</option>
+                                          <option value="2" >2号线</option>
+                                          <option value="3">3号线</option>
+                                          <option value="4" >4号线</option>
+                                          <option value="5">5号线</option>
+                                          <option value="6">6号线</option>
+                                          <option value="7" >7号线</option>
+                                          <option value="8">8号线</option>
+                                          <option value="9">9号线</option>
+                                        </select>
+                                      </div>
+                                      <div class="select-item">
+                                          <select name="" class="form-control select-form " id="time-selected">
+                                          <option value="-1" disabled>请选择时间范围</option>
+                                          <option value="1" selected="selected">今天</option>
+                                          <option value="2">本周</option>
+                                          <option value="3">本月</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                </div>    
+                                <div class="col-md-8">
+                                    <div id="station-all-chart" style="min-height:300px"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="section-update" style="margin-top:70px">
+                                        <div class="update">
+                                            <a id="stationupdate" href="javascript:void(0)" style="color:#65cea7;background-color: #fff;border-color: #65cea7;font-size: 18px;z-index: 99999;position: relative;" class="btn btn-primary"  onmouseout=changeColor(this,2) onmouseover=changeColor(this,1) onclick=progressGo(1)>点击优化站点</a>
+                                        </div>
+                                        <div class="updating" style="margin-top:-45px">
+                                            <div class="jq22-container jq22-container-1">
+                                                <header class="jq22-header">
+                                                    <h3>正在优化站点</h3>
+
+                                                </header>
+                                                
+                                                <div class="jq22-content" style="background-color: #fff;">
+                                                    <div class="progress progress-4" style="height:44px">
+                                                      <b class="progress__bar progress__bar-4">
+                                                        <span class="progress__text progress__text-4" style="margin-left:-90px;font-size:18px;line-height: 2">
+                                                          进度: <em>0%</em>
+                                                        </span>
+                                                      </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nice nice-1" style="position: absolute;width:150px;top:40px;right:100px;opacity: 0;z-index: 0">
+                                        <img src="../images/nice.png" alt="">
+                                    </div>
+
+                                </div>    
+<!--                                 <div class="bar-waring bar-waring-1"></div>
+                                <div class="bar-waring bar-waring-2"></div>
+                                <div class="bar-waring bar-waring-3"></div>
+                                <div class="bar-waring bar-waring-4"></div> -->
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </section>    
+                <section class="panel">
+                    <header class="panel-heading">
+                    班次乘坐率统计
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="riderate">
+                          <div class="riderate-title">
+                            数据分析
+                          </div>
+                          <div class="row">
+                             <div class="col-md-12" style="padding: 0">
+                                <div class="chart-hedding">
+                                    <div class="chart-select">
+                                      <div class="select-item">
+                                        <select name="" class="form-control select-form " id="data-selected">
+                                          <option value="-1" disabled>请选择线路</option>
+                                          <option value="1" selected="selected">1号线</option>
+                                          <option value="2" >2号线</option>
+                                          <option value="3">3号线</option>
+                                          <option value="4" >4号线</option>
+                                          <option value="5">5号线</option>
+                                          <option value="6">6号线</option>
+                                          <option value="7" >7号线</option>
+                                          <option value="8">8号线</option>
+                                          <option value="9">9号线</option>
+                                        </select>
+                                      </div>
+                                      <div class="select-item">
+                                          <select name="" class="form-control select-form " id="time-selected">
+                                          <option value="-1" disabled>请选择时间范围</option>
+                                          <option value="1" selected="selected">今天</option>
+                                          <option value="2">本周</option>
+                                          <option value="3">本月</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                </div>    
+                                <div class="col-md-8">
+                                    <div id="line-all-chart" style="min-height:300px"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="section-update" style="margin-top:70px">
+                                        <div class="update">
+                                            <a id="shiftupdate" href="javascript:void(0)" style="color:#65cea7;background-color: #fff;border-color: #65cea7;font-size: 18px;z-index: 99999;position: relative;" class="btn btn-primary"  onmouseout=changeColor(this,2) onmouseover=changeColor(this,1) onclick=progressGo(2)>点击优化站点</a>
+                                        </div>
+                                        <div class="updating" style="margin-top:-45px">
+                                            <div class="jq22-container">
+                                                <header class="jq22-header">
+                                                    <h3>正在优化站点</h3>
+
+                                                </header>
+                                                
+                                                <div class="jq22-content" style="background-color: #fff;">
+                                                    <div class="progress progress-6" style="height:44px">
+                                                      <b class="progress__bar progress__bar-6">
+                                                        <span class="progress__text progress__text-6" style="margin-left:-90px;font-size:18px;line-height: 2">
+                                                          进度: <em>0%</em>
+                                                        </span>
+                                                      </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nice nice-2" style="position: absolute;width:150px;top:40px;right:100px;opacity: 0;z-index: 0">
+                                        <img src="../images/nice.png" alt="">
+                                    </div>
+
+                                </div>
+                    
+<!--                                 <div class="bar-waring bar-waring-1" style="top:104px;left:72px"></div>
+                                <div class="bar-waring bar-waring-2" style="top:99px;left:199px"></div>
+                                <div class="bar-waring bar-waring-3" style="top:87px;left:325px"></div>
+                                <div class="bar-waring bar-waring-4" style="top:110px;left:456px"></div> -->
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </section>    
+                <section class="panel">
+                    <header class="panel-heading">
+                    线路乘坐率统计
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="riderate">
+                          <div class="riderate-title">
+                            数据分析
+                          </div>
+                          <div class="row">
+                             <div class="col-md-12" style="padding: 0">
+                                <div class="chart-hedding">
+                                    <div class="chart-select">
+                                      <div class="select-item">
+
+                                      </div>
+                                      <div class="select-item">
+                                           <select name="" class="form-control select-form " id="time-selected">
+                                          <option value="-1" disabled>请选择时间范围</option>
+                                          <option value="1" selected="selected">今天</option>
+                                          <option value="2">本周</option>
+                                          <option value="3">本月</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                </div>    
+                                <div class="col-md-8">
+                                    <div id="roast-all-chart" style="min-height:300px"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="section-update" style="margin-top:70px">
+                                        <div class="update">
+                                            <a id="lineupdate" href="javascript:void(0)" style="color:#65cea7;background-color: #fff;border-color: #65cea7;font-size: 18px;z-index: 99999;position: relative;" class="btn btn-primary"  onmouseout=changeColor(this,2) onmouseover=changeColor(this,1) onclick=progressGo(3)>点击优化站点</a>
+                                        </div>
+                                        <div class="updating" style="margin-top:-45px">
+                                            <div class="jq22-container">
+                                                <header class="jq22-header">
+                                                    <h3>正在优化站点</h3>
+
+                                                </header>
+                                                
+                                                <div class="jq22-content" style="background-color: #fff;">
+                                                    <div class="progress progress-7" style="height:44px">
+                                                      <b class="progress__bar progress__bar-7">
+                                                        <span class="progress__text progress__text-7" style="margin-left:-90px;font-size:18px;line-height: 2">
+                                                          进度: <em>0%</em>
+                                                        </span>
+                                                      </b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nice nice-3" style="position: absolute;width:150px;top:40px;right:100px;opacity: 0;z-index: 0">
+                                        <img src="../images/nice.png" alt="">
+                                    </div>
+
+                                </div>
+
+
+                                
+                                <!-- <div class="bar-waring bar-waring-1" style="top:254px;left:434px"></div> -->
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </section>    
+            </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer class="">
+            2016 &copy; Busoo by Nihoo
+        </footer>
+        <!--footer section end-->
+
+        <div id="modal-prompt" class="modal-default" style="margin-left:2%;">
+            <div class="row">
+                <div class="col-md-6" style="text-align: center;">
+                    <div class="left"><a id="sure" onclick=closeModal() href="javascript:void(0)" class="btn btn-info" style="padding:7px 28px">是</a></div> 
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <div class="right"><a href="javascript:void(0)" class="btn btn-info" style="padding:7px 28px">否</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+
+<!-- height chart -->
+<script src="../js/highcharts.js"></script>
+
+<!--iziModal动态弹窗-->
+<script src="../js/iziModal.min.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../js/scripts.js"></script>
+
+<script src='../js/stopExecutionOnTimeout.js?t=1'></script>
+<script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+
+
+<script>
+//647行：柱状图单个柱颜色调整
+    function closeModal(){
+        $('#modal-prompt').iziModal('close');
+        setTimeout("location.href = 'addline-5.html'",1000);
+    }
+
+    $('#modal').iziModal();
+   
+    $("#modal-prompt").iziModal({
+        title: "是否发送优化消息给手机端？",
+        subtitle: "",
+        headerColor: "#77c2ef",
+        iconClass: 'icon-announcement',
+        width: 300,
+        padding: 20
+    });
+    function changeColor(obj,m){
+        if(m == 1){
+            obj.style.color = "#fff";
+            obj.style.backgroundColor = "rgb(101, 206, 167)";
+            // obj.style.borderColor = "#fff";
+        }
+        else if(m == 2){
+            obj.style.color = "#65cea7";
+            obj.style.backgroundColor = "#fff";
+            // obj.style.borderColor = "#65cea7";
+        }
+    }
+
+    Highcharts.createElement('link', {
+    href: 'http://fonts.googleapis.com/css?family=Dosis:400,600',
+    rel: 'stylesheet',
+    type: 'text/css'
+}, null, document.getElementsByTagName('head')[0]);
+
+Highcharts.theme = {
+    colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+        "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    chart: {
+        backgroundColor: null,
+        style: {
+            fontFamily: "微软雅黑"
+        }
+    },
+    title: {
+        style: {
+            fontSize: '16px',
+            fontWeight: 'normal',
+            textTransform: 'uppercase'
+        }
+    },
+    tooltip: {
+        borderWidth: 0,
+        backgroundColor: 'rgba(219,219,216,0.8)',
+        shadow: false
+    },
+    legend: {
+        itemStyle: {
+            fontWeight: 'normal',
+            fontSize: '14px',
+            fontFamily:'微软雅黑'
+        }
+    },
+    xAxis: {
+        gridLineWidth: 0,
+        labels: {
+            style: {
+                fontSize: '12px'
+            }
+        }
+    },
+    yAxis: {
+        minorTickInterval: 'auto',
+        title: {
+            style: {
+                textTransform: 'uppercase'
+            }
+        },
+        labels: {
+            style: {
+                fontSize: '12px'
+            }
+        }
+    },
+    plotOptions: {
+        candlestick: {
+            lineColor: '#404048'
+        }
+    },
+
+
+    // General
+    background2: '#F0F0EA'
+    
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);
+var a=[32.6, 85.9, 89.0, 26.4, 78.7, 35.6,8,47,98,76,78];
+for(var i=0;i<a.length;i++){
+    if(a[i]<60){
+        a[i]={y:a[i],color:'#65cea4'};
+    }
+}
+$('#station-all-chart').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '此线路站点乘坐率'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['酱园街', '欧鹏大道','驿都大道中路','驿都大道西路', '上沙河铺街','二环路东四段', '二环高架路','二环路东一段','二环路北四段','八里桥路','站北路']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '乘坐率 (%)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                color:'#666666'
+                //'#6a8abe'
+            }
+        },
+        series: [{
+            name: '乘坐率',
+            data:a
+        }]
+    });
+$('#line-all-chart').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '此线路班次乘坐率'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1号线-7:00-1车','1号线-7:10-2车','1号线-7:30-3车','1号线-8:00-4车','1号线-8:20-5车','1号线-8:40-6车','1号线-17:00-7车','1号线-17:20-8车','1号线-17:40-9车']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '乘坐率 (%)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                color:'#5ab6df'
+            }
+        },
+        series: [{
+            name: '乘坐率',
+            data: [32.6, 85.9,38,67,48,76,28,76,56]
+        }]
+    });
+  $('#roast-all-chart').highcharts({
+        title: {
+            text: '所有线路乘坐率',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: ['1号线','2号线','3号线','4号线']
+        },
+        yAxis: {
+            title: {
+                text: '乘坐率 (%)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '乘坐率',
+            data: [72.6, 85.9, 89.0, 66.4]
+        }]
+    }); 
+    function progressGo(m){ 
+        if(m == 1){
+            $("#stationupdate").css("opacity","0");
+            var $progress = $('.progress-4'), $bar = $('.progress__bar-4'), $text = $('.progress__text-4'), percent = 0, update, resetColors, speed = 10, orange = 30, yellow = 55, green = 85, timer;
+            resetColors = function () {
+                $bar.removeClass('progress__bar--green').removeClass('progress__bar--yellow').removeClass('progress__bar--orange').removeClass('progress__bar--blue');
+                $progress.removeClass('progress--complete');
+            };
+            update = function () {
+                timer = setTimeout(function () {
+                    percent += Math.random() * 8;
+                    percent = parseFloat(percent.toFixed(1));
+                    $text.find('em').text(percent + '%');
+                    if (percent >= 100) {
+                        $(".jq22-container-1").css("display","none");
+                        $(".nice-1").css("opacity","1");
+
+                        percent = 100;
+                        $progress.addClass('progress--complete');
+                        $bar.addClass('progress__bar--blue');
+                        $text.find('em').text('优化完成');
+                        $('#modal-prompt').iziModal('open');
+                    } else {
+                        if (percent >= green) {
+
+                            $bar.addClass('progress__bar--green');
+                        } else if (percent >= yellow) {
+
+                            $bar.addClass('progress__bar--yellow');
+                        } else if (percent >= orange) {
+                            
+                            $bar.addClass('progress__bar--orange');
+                        }
+                        speed = Math.floor(Math.random() * 900);
+                        update();
+                    }
+                    $bar.css({ width: percent + '%' });
+                }, speed);
+            };
+                setTimeout(function () {
+                    $progress.addClass('progress--active');
+
+                    update();
+                }, 10);
+            }   
+        else if(m == 4){
+            $("#updateall").css("opacity","0");
+            $("#stationupdate").css("opacity","0");
+            $(".jq22-container-1").css("opacity","0");
+            $("#lineupdate").css("opacity","0");
+            $("#shiftupdate").css("opacity","0");
+            var $progress = $('.progress-5'), $bar = $('.progress__bar-5'), $text = $('.progress__text-5'), percent = 0, update, resetColors, speed = 10, orange = 30, yellow = 55, green = 85, timer;
+            resetColors = function () {
+                $bar.removeClass('progress__bar--green').removeClass('progress__bar--yellow').removeClass('progress__bar--orange').removeClass('progress__bar--blue');
+                $progress.removeClass('progress--complete');
+            };
+            update = function () {
+                timer = setTimeout(function () {
+                    percent += Math.random() * 8;
+                    percent = parseFloat(percent.toFixed(1));
+                    $text.find('em').text(percent + '%');
+                    if (percent >= 100) {
+                        $("#stationupdate").css("opacity","0");
+                        // $("#shiftupdate").css("opacity","0");
+                        // $("#lineupdate").css("opacity","0");
+
+                        $(".nice-3").css("opacity","1");
+                        $(".nice-2").css("opacity","1");
+                        $(".nice-1").css("opacity","1");
+
+                        percent = 100;
+                        $progress.addClass('progress--complete');
+                        $bar.addClass('progress__bar--blue');
+                        $text.find('em').text('优化完成');
+                        $('#modal-prompt').iziModal('open');
+
+                    } else {
+                        if (percent >= green) {
+
+                            $bar.addClass('progress__bar--green');
+                        } else if (percent >= yellow) {
+
+                            $bar.addClass('progress__bar--yellow');
+                        } else if (percent >= orange) {
+                            
+                            $bar.addClass('progress__bar--orange');
+                        }
+                        speed = Math.floor(Math.random() * 900);
+                        update();
+                    }
+                    $bar.css({ width: percent + '%' });
+                }, speed);
+            };
+                setTimeout(function () {
+                    $progress.addClass('progress--active');
+
+                    update();
+                }, 10);
+
+            
+        
+
+
+            } 
+
+        } 
+
+
+</script>
+</body>
+</html>
